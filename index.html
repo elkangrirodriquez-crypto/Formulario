@@ -1,0 +1,181 @@
+</head>
+<body>
+
+<div class="container">
+    <header>
+        <h1>SOLICITUD DE EMPLEO</h1>
+    </header>
+
+    <h2 class="header-blue">1. DATOS DEL PUESTO SOLICITADO</h2>
+    <form action="/submit-application" method="POST">
+        <div class="form-group full-width">
+            <label for="puesto">PUESTO AL QUE APLICA:</label>
+            <input type="text" id="puesto" name="puesto" required>
+        </div>
+        <div class="form-group inline-group full-width">
+            <label>HORARIO DISPONIBLE:</label>
+            <label class="checkbox-label"><input type="checkbox" name="horario[]" value="manana"> MAÑANA</label>
+            <label class="checkbox-label"><input type="checkbox" name="horario[]" value="tarde"> TARDE</label>
+            <label class="checkbox-label"><input type="checkbox" name="horario[]" value="noche"> NOCHE</label>
+            <label class="checkbox-label"><input type="checkbox" name="horario[]" value="sabado"> SÁBADO</label>
+            <label class="checkbox-label"><input type="checkbox" name="horario[]" value="domingo"> DOMINGO</label>
+        </div>
+
+    <h2 class="header-blue">2. DATOS PERSONALES</h2>
+
+        <div class="form-group half-width">
+            <label for="apellidos">APELLIDOS:</label>
+            <input type="text" id="apellidos" name="apellidos" required>
+        </div>
+        <div class="form-group half-width">
+            <label for="nombres">NOMBRES:</label>
+            <input type="text" id="nombres" name="nombres" required>
+        </div>
+        
+        <div class="form-group half-width">
+            <label for="documento_tipo">DOCUMENTO (CÉDULA o PASAPORTE):</label>
+            <input type="text" id="documento_tipo" name="documento_tipo" required>
+        </div>
+        <div class="form-group half-width inline-group">
+            <label>SEXO:</label>
+            <label><input type="radio" name="sexo" value="M"> M</label>
+            <label><input type="radio" name="sexo" value="F"> F</label>
+        </div>
+
+        <div class="form-group full-width inline-group">
+            <label>ESTADO CIVIL:</label>
+            <label class="checkbox-label"><input type="radio" name="estado_civil" value="soltero"> SOLTERO/A</label>
+            <label class="checkbox-label"><input type="radio" name="estado_civil" value="casado"> CASADO/A</label>
+            <label class="checkbox-label"><input type="radio" name="estado_civil" value="divorciado"> DIVORCIADO/A</label>
+            <label class="checkbox-label"><input type="radio" name="estado_civil" value="union_libre"> UNIÓN LIBRE</label>
+        </div>
+
+        <div class="form-group full-width">
+            <label for="direccion">DIRECCIÓN (Calle y Número):</label>
+            <input type="text" id="direccion" name="direccion">
+        </div>
+
+        <div class="form-group half-width">
+            <label for="provincia">PROVINCIA:</label>
+            <input type="text" id="provincia" name="provincia">
+        </div>
+        <div class="form-group half-width">
+            <label for="ciudad">CIUDAD:</label>
+            <input type="text" id="ciudad" name="ciudad">
+        </div>
+        
+        <div class="form-group half-width">
+            <label for="municipio">MUNICIPIO:</label>
+            <input type="text" id="municipio" name="municipio">
+        </div>
+        <div class="form-group half-width">
+            <label for="sector_barrio">SECTOR/BARRIO:</label>
+            <input type="text" id="sector_barrio" name="sector_barrio">
+        </div>
+
+        <div class="form-group full-width inline-group">
+            <div><label for="Telefono">Telefono:</label><input type="tel" id="tel_per" name="tel_movil"></div>
+            <div class="half-width"><label for="tel_res">RESIDENCIAL:</label><input type="tel" id="tel_res" name="tel_res"></div>
+            <div class="half-width"><label for="tel_movil">MÓVIL:</label><input type="tel" id="tel_movil" name="tel_movil"></div>
+        </div>
+
+        <div class="form-group half-width">
+            <label for="fecha_nacimiento">FECHA DE NACIMIENTO:</label>
+            <input type="date" id="fecha_nacimiento" name="fecha_nacimiento">
+        </div>
+        <div class="form-group half-width">
+            <label for="edad">EDAD:</label>
+            <input type="number" id="edad" name="edad" min="18" max="100">
+        </div>
+
+        <div class="form-group full-width">
+            <label for="email">CORREO ELECTRÓNICO:</label>
+            <input type="email" id="email" name="email" required>
+        </div>
+
+        <div class="form-group full-width inline-group">
+            <label>¿ES USTED UNA PERSONA CON DISCAPACIDAD?</label>
+            <label><input type="radio" name="discapacidad_si_no" value="si"> SÍ</label>
+            <label><input type="radio" name="discapacidad_si_no" value="no"> NO</label>
+            <label>EN CASO AFIRMATIVO, ESPECIFIQUE CUÁL:</label>
+            <label class="checkbox-label"><input type="checkbox" name="discapacidad_tipo[]" value="auditiva"> AUDITIVA</label>
+            <label class="checkbox-label"><input type="checkbox" name="discapacidad_tipo[]" value="motriz"> MOTRIZ</label>
+            <label class="checkbox-label"><input type="checkbox" name="discapacidad_tipo[]" value="visual"> VISUAL</label>
+            <label class="checkbox-label"><input type="checkbox" name="discapacidad_tipo[]" value="intelectual"> INTELECTUAL</label>
+        </div>
+
+    <h2 class="header-blue">3. DATOS EDUCACIONALES</h2>
+        <div class="form-group full-width">
+            <label for="nivel_educacion">NIVEL MÁXIMO DE EDUCACIÓN ALCANZADO:</label>
+            <select id="nivel_educacion" name="nivel_educacion">
+                <option value="">Seleccione...</option>
+                <option value="basica">Educación Básica</option>
+                <option value="media">Educación Media (Bachillerato)</option>
+                <option value="tecnico">Técnico/Vocacional</option>
+                <option value="universitario_incompleto">Universitario Incompleto</option>
+                <option value="universitario_completo">Universitario Completo</option>
+                <option value="postgrado">Postgrado/Maestría/Doctorado</option>
+            </select>
+        </div>
+
+        <div class="form-group half-width">
+            <label for="profesion">PROFESIÓN O CARRERA:</label>
+            <input type="text" id="profesion" name="profesion">
+        </div>
+        <div class="form-group half-width">
+            <label for="universidad">UNIVERSIDAD/INSTITUCIÓN:</label>
+            <input type="text" id="universidad" name="universidad">
+        </div>
+
+    <h2 class="header-blue">4. DATOS LABORALES</h2>
+        <div class="form-group full-width inline-group">
+            <label>SITUACIÓN LABORAL ACTUAL:</label>
+            <label class="checkbox-label"><input type="radio" name="situacion_laboral" value="trabajador_por_cuenta_propia"> TRABAJADOR POR CUENTA PROPIA</label>
+            <label class="checkbox-label"><input type="radio" name="situacion_laboral" value="empleado"> EMPLEADO</label>
+            <label class="checkbox-label"><input type="radio" name="situacion_laboral" value="desempleado"> DESEMPLEADO</label>
+            <label class="checkbox-label"><input type="radio" name="situacion_laboral" value="buscando_primer_empleo"> BUSCANDO PRIMER EMPLEO</label>
+        </div>
+
+        <div class="form-group full-width">
+            <label>ÚLTIMA O ACTUAL EMPRESA (Ocultar si es Desempleado/a):</label>
+            <input type="text" id="nombre_empresa" name="nombre_empresa">
+        </div>
+        <div class="form-group half-width">
+            <label for="posicion_actual">POSICIÓN O PUESTO QUE DESEMPEÑA ACTUALMENTE:</label>
+            <input type="text" id="posicion_actual" name="posicion_actual">
+        </div>
+        <div class="form-group half-width">
+            <label for="telefono_empresa">TELÉFONO DE LA EMPRESA:</label>
+            <input type="tel" id="telefono_empresa" name="telefono_empresa">
+        </div>
+        <div class="form-group full-width">
+            <label for="actividad_principal">DESCRIPCIÓN DE LA ACTIVIDAD LABORAL PRINCIPAL:</label>
+            <textarea id="actividad_principal" name="actividad_principal"></textarea>
+        </div>
+
+    <h2 class="header-blue">5. INFORMACIONES IMPORTANTES</h2>
+        <div class="form-group full-width">
+            <label>DOCUMENTOS A ANEXAR (Para el Solicitante):</label>
+            <ul>
+                <li>Copia de cédula de identidad y/o pasaporte.</li>
+                <li>Currículum Vitae actualizado.</li>
+                <li>Documentación que avale el nivel de escolaridad (copia de títulos).</li>
+            </ul>
+        </div>
+
+    <div class="signature-box">
+        <p>___________________________________</p>
+        <p>Firma solicitante</p>
+    </div>
+
+    <button type="submit">ENVIAR SOLICITUD</button>
+    </form>
+
+    <div class="footer-info">
+        <p>Nota: La empresa garantiza la confidencialidad de la información suministrada.</p>
+    </div>
+
+</div>
+
+</body>
+</html>
